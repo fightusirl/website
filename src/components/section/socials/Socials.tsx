@@ -1,30 +1,30 @@
-import { Icon } from "@/components/ui/icons/Icons";
+import { Github } from "@/components/icons/Github";
+import { Youtube } from "@/components/icons/Youtube";
 import { FC } from "react";
 
 type SocialItem = {
   label: string;
   href: string;
-  icon: keyof typeof Icon;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
 };
 
 const socials: SocialItem[] = [
   {
-    label: "YouTube",
-    href: "https://www.youtube.com/",
-    icon: "Youtube",
+    label: "@FightUsIRL",
+    href: "https://www.youtube.com/@FightUsIRL",
+    icon: Youtube,
   },
   {
-    label: "GitHub",
-    href: "https://github.com/",
-    icon: "Github",
+    label: "FightUsIRL",
+    href: "https://github.com/FightUsIRL",
+    icon: Github,
   },
 ];
 
 export const Socials: FC = () => {
   return (
-    <div>
+    <div className="flex gap-[24px] flex-wrap items-center justify-center">
       {socials.map(social => {
-        const IconComponent = Icon[social.icon];
         return (
           <a
             key={social.label}
@@ -33,7 +33,7 @@ export const Socials: FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconComponent fill="red" />
+            <social.icon />
             {social.label}
           </a>
         );

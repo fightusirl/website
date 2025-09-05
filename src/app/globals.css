@@ -5,11 +5,60 @@
   --foreground: #171717;
 }
 
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
 @theme inline {
+  --color-brand-pink: #FF6FB5;
+  --color-brand-green: #C1D26C;
+  --color-brand-blue: #87CEEB;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-bubble: var(--font-cherry-bomb-one);
+
+  --text-heading-xl: 3rem;
+  --leading-heading-xl: 3.5rem;
+
+  --text-heading-lg: 2.5rem;
+  --leading-heading-lg: 3rem;
+
+  --text-heading-md: 2rem;
+  --leading-heading-md: 2.5rem;
+
+  --text-heading-sm: 1.75rem;
+  --leading-heading-sm: 2.25rem;
+
+  --text-heading-xs: 1.5rem;
+  --leading-heading-xs: 2rem;
+
+  --text-heading-2xs: 1.25rem;
+  --leading-heading-2xs: 1.75rem;
+
+  --text-xs: 0.625rem;
+  --leading-xs: 0.75rem;
+
+  --text-sm: 0.75rem;
+  --leading-sm: 1.25rem;
+
+  --text-md: 0.875rem;
+  --leading-md: 1rem;
+
+  --text-base: 1rem;
+  --leading-base: 1.75rem;
+
+  --text-lg: 1.25rem;
+  --leading-lg: 1.75rem;
+
+  --text-7xl: 5rem;
+  --leading-7xl: 5.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
