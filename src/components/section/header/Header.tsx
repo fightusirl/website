@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Header: React.FC = props => {
   return (
-    <div className="w-full flex justify-center h-28">
+    <div className="w-full flex justify-center h-[7rem]">
       <div className="flex flex-row justify-between items-center px-4 py-4 w-5xl">
         <div className="flex gap-4">
           <Social href="https://www.youtube.com/@FightUsIRL" ariaLabel="Youtube" rotate={8}>
@@ -56,7 +56,7 @@ function Social({
       className={clsx(
         "inline-flex items-center justify-center rounded-2xl",
         "bg-brand-pink text-white shadow-[0_2px_0_rgba(0,0,0,1)]",
-        "transition-transform hover:-translate-y-0.5 active:translate-y-0",
+        "transition-transform hover:-translate-y-0.5 active:translate-y-0 hover:bg-brand-blue",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/50",
         isText ? "px-4 h-11 text-md font-bubble" : "h-11 w-11"
       )}

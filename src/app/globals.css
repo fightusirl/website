@@ -5,9 +5,60 @@
   --foreground: #171717;
 }
 
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+ 
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
 @keyframes spin-slow {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeinup {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@layer utilities {
+  .font-outline-2 {
+    -webkit-text-stroke: 2px black;
+  }
+}
+
+.animate-fadein {
+  animation: fadeinup 1s ease-in-out;
 }
 
 .animate-spin-slow {
@@ -17,7 +68,7 @@
 @theme inline {
   --color-brand-pink: #FF6FB5;
   --color-brand-green: #C1D26C;
-  --color-brand-blue: #87CEEB;
+  --color-brand-blue: #4fc3f7;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
@@ -59,6 +110,12 @@
 
   --text-7xl: 5rem;
   --leading-7xl: 5.5rem;
+
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
 }
 
 @media (prefers-color-scheme: dark) {

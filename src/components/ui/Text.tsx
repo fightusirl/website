@@ -14,7 +14,7 @@ type TextProps = {
   size?: keyof typeof sizes;
 };
 
-export const Text: React.FC<TextProps> = ({ children, className, size = "sm", ...rest }) => {
+export const Text: React.FC<TextProps> = ({ children, className, size = "md", ...rest }) => {
   return (
     <span className={cn(sizes[size], className)} {...rest}>
       {children}
