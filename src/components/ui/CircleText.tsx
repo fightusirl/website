@@ -51,13 +51,7 @@ type Props = {
   speedMs?: number;
 };
 
-export default function CircleText({
-  text,
-  radius = 35,
-  size = 200,
-  className = "",
-  speedMs = 12000,
-}: Props) {
+export default function CircleText({ text, radius = 35, size = 200, className = "", speedMs = 12000 }: Props) {
   const uid = useId();
   const pathId = `circlePath-${uid}`;
   const circumference = 2 * Math.PI * radius;
