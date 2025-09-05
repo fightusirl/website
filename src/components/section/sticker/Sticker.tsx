@@ -13,7 +13,7 @@ export const Sticker: React.FC = () => {
           "border-2 border-black"
         )}
         >
-        <CircleText text="Bongurrence • Bongurrence •" radius={40} />
+        <CircleText text="Bongurrence • Bongurrence •" radius={40} size={164} />
         <Beer style={{ transform: `rotate(10deg)` }} className="absolute p-1 w-14 h-auto" />
         </div>
     </div>
